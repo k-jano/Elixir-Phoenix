@@ -40,6 +40,7 @@ defmodule PokerPotionWeb do
       import PokerPotionWeb.Router.Helpers
       import PokerPotionWeb.ErrorHelpers
       import PokerPotionWeb.Gettext
+      import PokerPotion.Accounts.Auth, only: [logged_in?: 1]
     end
   end
 
