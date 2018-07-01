@@ -13,11 +13,11 @@ defmodule PokerPotionWeb.SessionController do
             {:ok, user} -> 
                 conn
                 |> put_session(:user, user.name)
-                |> put_flash(:info, "Congrats You Logged in Bro")
+                |> put_flash(:info, "Congrats You Logged in")
                 |> redirect(to: "/")
             :error ->
                 conn
-                |> put_flash(:error, "You failed")
+                |> put_flash(:error, "Incorrect email or password")
                 |> render("new.html")    
         end
     end
